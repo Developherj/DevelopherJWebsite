@@ -5,6 +5,7 @@ import { navLinks } from "@/app/constant/constant";
 import Link from "next/link";
 import { FaPhone } from "react-icons/fa";
 import { HiBars3BottomRight } from "react-icons/hi2";
+import ThemeToggle from "@/components/helpers/ThemeToggle";
 
 interface NavProps {
   openNav: () => void;
@@ -64,6 +65,7 @@ const Nav = ({ openNav }: NavProps) => {
               Contact me
             </span>
           </a>
+          <ThemeToggle />
 
           <HiBars3BottomRight
             onClick={openNav}
