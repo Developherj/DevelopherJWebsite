@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { navLinks } from "@/app/constant/constant";
 import Link from "next/link";
@@ -10,8 +11,24 @@ interface NavProps {
 }
 
 const Nav = ({ openNav }: NavProps) => {
+  const [navBg, setNavBg] = useState(false);
+
+  useEffect(() => {
+    const handler = () => {
+      if (window.scrollY >= 90) setNavBg(true);
+      else setNavBg(false);
+    };
+
+    window.addEventListener("scroll", handler);
+
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
   return (
-    <div className="transition-all duration-200 h-[12vh] z-[100] fixed w-full bg-[#f2ebe9]">
+    <div
+      className={`transition-all ${
+        navBg ? "bg-[#f7a7a7] shadow-md " : "fixed"
+      } duration-200 h-[12vh] z-[100] fixed w-full bg-[#f2ebe9]`}
+    >
       <div className="flex items-center h-full justify-between sm:w-[80%] w-[90%] mx-auto">
         <div>
           {/* <img src={DevelopherjLogo} alt="developherj logo" /> */}
