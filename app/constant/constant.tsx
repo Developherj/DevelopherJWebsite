@@ -218,3 +218,12 @@ export const skills = [
     ),
   },
 ];
+
+export const pretext =
+  "I am a highly skilled Software Engineer specialising in";
+
+export const specialisms = [
+  "building seamless user experiences",
+  "optimising interface functionality",
+  "delivering high-performance web applications.",
+];

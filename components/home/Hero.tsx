@@ -1,9 +1,17 @@
 "use client";
+import { specialisms, pretext } from "@/app/constant/constant";
 import Image from "next/image";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
+  const generateSequence = () => {
+    return specialisms.flatMap((specialism) => [
+      `${pretext}\n${specialism}`,
+      1000,
+    ]);
+  };
+
   return (
     <div className="relative w-full h-screen flex justify-center flex-col bg-[#f3ebeb] bg_clip">
       <div className=" w-[90%] md:w-[80%] mx-auto items-center grid grid-cols-1 xl:grid-cols-2  gap-10 ">
@@ -14,14 +22,7 @@ const Hero = () => {
           </h1>
 
           <TypeAnimation
-            sequence={[
-              "I am a highly skilled Software Engineer specialising in\nbuilding seamless user experiences",
-              1000,
-              "I am a highly skilled Software Engineer specialising in\noptimising interface functionality",
-              1000,
-              "I am a highly skilled Software Engineer specialising in\ndelivering high-performance web applications.",
-              1000,
-            ]}
+            sequence={generateSequence()}
             wrapper="span"
             speed={50}
             cursor={true}
