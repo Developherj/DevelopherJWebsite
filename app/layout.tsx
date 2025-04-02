@@ -3,6 +3,9 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import ResponsiveNav from "@/components/home/nav-bar/ResponsiveNav";
 import Provider from "@/components/hoc/Provider";
+import Footer from "@/components/home/Footer";
+import ScrollToTop from "@/components/helpers/ScrollToTop";
+import AOSProvider from "@/components/AOSProvider";
 
 const font = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -22,9 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${font.className} antialiased`}>
+        <AOSProvider />
         <Provider>
           <ResponsiveNav />
           {children}
+          <Footer />
+          <ScrollToTop />
         </Provider>
       </body>
     </html>

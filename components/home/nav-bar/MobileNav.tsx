@@ -1,3 +1,4 @@
+"use client";
 import { navLinks } from "@/app/constant/constant";
 import Link from "next/link";
 import React from "react";
@@ -21,7 +22,7 @@ const MobileNav = ({ closeNav, showNav }: MobileNavProps) => {
       >
         {navLinks.map((link) => {
           return (
-            <Link key={link.id} href={link.url}>
+            <Link key={link.id} href={link.url} onClick={closeNav}>
               <p className="text-white w-fit text-xl ml-12 border-b-[1.5px] pb-1 border-white sm:text-[30px]">
                 {link.label}
               </p>

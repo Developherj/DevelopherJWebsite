@@ -5,21 +5,21 @@ const Hero = () => {
   return (
     <div className="relative w-full h-screen flex justify-center flex-col bg-[#f3ebeb] bg_clip">
       <div className=" w-[90%] md:w-[80%] mx-auto items-center grid grid-cols-1 xl:grid-cols-2  gap-10 ">
-        <div>
-          <h1 className=" text-3xl md:4xl text-[var(--dj-blue)] lg:text-5xl mt-6 mb-6 font-bold leading-[2.5rem] md:leading-[3.5rem]">
+        <div data-aos="fade-up">
+          <h1 className="text-3xl md:4xl text-[var(--dj-blue)] lg:text-5xl mt-6 mb-6 font-bold leading-[2.5rem] md:leading-[3.5rem]">
             {" "}
-            Introducing your next innovative frontend engineer.
+            Introducing your next innovative Developer.
           </h1>
 
           <p className="text-xs sm:text-sm md:text-base font-medium text-[var(--dj-blue)] ">
-            I am a highly skilled software engineer specializing in building
-            seamless user experiences, optimizing interface functionality, and
+            I am a highly skilled Software Engineer specialising in building
+            seamless user experiences, optimising interface functionality, and
             delivering high-performance web applications.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row w-fit sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a
-              href="#_"
+              href="mailto:developherj@gmail.com"
               className="relative px-10 py-3 font-medium text-white transition duration-300 bg-[var(--dj-blue)] rounded-md hover:bg-[#747c99]  ease"
             >
               <span className="absolute bottom-0 left-0 h-full -ml-2">
@@ -54,7 +54,11 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className="mx-auto hidden xl:block ">
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="150"
+          className="mx-auto hidden xl:block "
+        >
           <Image
             src="/images/Developherj_sublogo.png"
             alt="developherj image"

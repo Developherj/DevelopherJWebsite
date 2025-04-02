@@ -4,14 +4,35 @@
     --dj-blue: #1c2051;
     --dj-pink: #ef229c;
     --dj-background: #f3ebeb;
+
   }
 
+
+  /* polygon(0 0, 0 60%, 0 100%,100% 83% , 100% 60%, 100% 0, 50% 0% ) */
 @layer components {
 
     .bg_clip{
         clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 83%, 0 100%, 0% 60%, 0 0)
     }
 
+    .bg_clip_right{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 87%);
+    }
+
+    .bg_clip_top{
+        clip-path: polygon(0 0, 100% 17%, 100% 100%, 0 100%);
+    }
+
+    .bg_clip_cs {
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+
+    }
+
+}
+
+.container {
+    margin-inline: auto;
+    padding-inline: 1rem;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
