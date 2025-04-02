@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
@@ -11,11 +13,21 @@ const Hero = () => {
             Introducing your next innovative Developer.
           </h1>
 
-          <p className="text-xs sm:text-sm md:text-base font-medium text-[var(--dj-blue)] ">
-            I am a highly skilled Software Engineer specialising in building
-            seamless user experiences, optimising interface functionality, and
-            delivering high-performance web applications.
-          </p>
+          <TypeAnimation
+            sequence={[
+              "I am a highly skilled Software Engineer specialising in\nbuilding seamless user experiences",
+              1000,
+              "I am a highly skilled Software Engineer specialising in\noptimising interface functionality",
+              1000,
+              "I am a highly skilled Software Engineer specialising in\ndelivering high-performance web applications.",
+              1000,
+            ]}
+            wrapper="span"
+            speed={50}
+            cursor={true}
+            className="text-xs sm:text-sm md:text-base font-medium text-[var(--dj-blue)] whitespace-pre-line"
+            repeat={1}
+          />
 
           <div className="mt-8 flex flex-col sm:flex-row w-fit sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a
