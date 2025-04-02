@@ -6,6 +6,7 @@ import Provider from "@/components/hoc/Provider";
 import Footer from "@/components/home/Footer";
 import ScrollToTop from "@/components/helpers/ScrollToTop";
 import AOSProvider from "@/components/AOSProvider";
+import { Analytics } from "@vercel/analytics/next";
 
 const font = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -29,6 +30,7 @@ export default function RootLayout({
         <Provider>
           <ResponsiveNav />
           {children}
+          <Analytics />
           <Footer />
           <ScrollToTop />
         </Provider>
