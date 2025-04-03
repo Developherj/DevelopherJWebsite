@@ -1,5 +1,3 @@
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
-  siteUrl: "https://www.developherj.com",
-  generateRobotsTxt: true,
-};
+export const siteUrl = "https://www.developherj.com";
+export const generateRobotsTxt = true;
