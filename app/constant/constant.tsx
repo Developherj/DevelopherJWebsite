@@ -36,13 +36,13 @@ export const navLinks = [
     url: "/about",
     label: "About",
   },
+  // {
+  //   id: 3,
+  //   url: "/projects",
+  //   label: "Projects",
+  // },
   {
     id: 3,
-    url: "/projects",
-    label: "Projects",
-  },
-  {
-    id: 4,
     url: "/contact",
     label: "Contact",
   },
